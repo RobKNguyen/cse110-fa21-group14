@@ -82,4 +82,9 @@ main #recipes-title{
   float: left;
 }
 
-  
+main .center {
+  top: 10em;
+  text-align: center;
+  border: 3px solid #d3d3d3;
+  background-color: #d3d3d3; 
+} 
