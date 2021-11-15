@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+        <meta name="description" content="Recipe storage" />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+        </style>
+        <link rel="stylesheet" href="popup-style.css">
+    </head>
+    <body>
+        <header>
+            <section id="main-bar">
+                <h1 id="site-name">App Name</h1>
+                <input type="text" id="search-bar" class="float-right" placeholder="Search">
+                <button id="grocery-list" class="float-right">Grocery list</button>
+                <button id="likes-list" class="float-right">Likes</button>
+            </section>
+        </header>
+        <main>
+            <section id="recipe-page-info">
+                <h1 id="recipes-title">Recipes</h1>
+                <button id="add-button" class="float-right">Add</button>
+                <button id="sort-button" class="float-right">Sort</button>
+            </section>
+            <section id="test-block">
+                <button id="test" onclick="test()">Press!</button>
+                <button id="p" onclick="p()">Press!</button>
+                <ul>
+                    <li>test</li>
+                    <li>testtt</li>
+                </ul>
+            </section>
+            <p>WOOOOO TESTING</p>
+            <script>
+                function test() {
+                    document.getElementById("recipe-popup").classList.add("show");
+                }
+                function testClose() {
+                    document.getElementById("recipe-popup").classList.remove("show");
+                }
+                function p() {
+                    var test_popup = document.getElementById("p-popup");
+                    test_popup.classList.add("show");
+                }
+                function pClose() {
+                    var test_popup = document.getElementById("p-popup");
+                    test_popup.classList.remove("show");
+                }
+            </script>
+        </main>
+        <div class="popup">
+            <section id="recipe-popup">
+                <button id="recipe-close" class="float-right line-spacing" onclick="testClose()">X</button>
+                <h2 id="recipe-name" class="line-spacing">Recipe Name</h2>
+                <p id="tracker" class="line-spacing">You have made this X times, most recent time was Y days ago.</p>
+                <img id="recipe-image" class="line-spacing" alt="Image of Dish">
+                <h3 id="ingredients-header" class="line-spacing">Ingredients</h3>
+                <ul id="ingredients" class="line-spacing">
+                    <li>0 Units of Ingredient 1</li>
+                </ul>
+                <button id="add-grocery" class="line-spacing">Add to Grocery List</button>
+                <h3 id="instructions-header" class="line-spacing">Instructions</h3>
+                <ol id="instructions" class="line-spacing">
+                    <li>Do something.</li>
+                    <li>Do something else.</li>
+                </ol>
+                <button id="track" class="line-spacing">Just Made</button>
+            </section>
+            <section id="p-popup">
+                <p onclick="pClose()">wooooooo</p>
+            </section>
+        </div>
+    </body>
+</html>
