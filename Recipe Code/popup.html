@@ -22,7 +22,7 @@
             <section id="recipe-page-info">
                 <h1 id="recipes-title">Recipes</h1>
                 <button id="add-button" class="float-right">Add</button>
-                <button id="sort-button" class="float-right">Sort</button>
+                <button id="sort-button" class="float-right" onclick="sf()">Sort</button>
             </section>
             <section id="test-block">
                 <button id="test" onclick="test()">Press!</button>
@@ -35,42 +35,110 @@
             <p>WOOOOO TESTING</p>
             <script>
                 function test() {
+                    document.getElementById("popups").classList.add("show");
                     document.getElementById("recipe-popup").classList.add("show");
                 }
                 function testClose() {
                     document.getElementById("recipe-popup").classList.remove("show");
+                    document.getElementById("popups").classList.remove("show");
                 }
                 function p() {
-                    var test_popup = document.getElementById("p-popup");
+                    document.getElementById("popups").classList.add("show");
+                    var test_popup = document.getElementById("recommended-recipe-popup");
                     test_popup.classList.add("show");
                 }
                 function pClose() {
-                    var test_popup = document.getElementById("p-popup");
+                    var test_popup = document.getElementById("recommended-recipe-popup");
+                    test_popup.classList.remove("show");
+                    document.getElementById("popups").classList.remove("show");
+                }
+                function sf() {
+                    document.getElementById("popups").classList.add("show");
+                    var test_popup = document.getElementById("sort-filter-popup");
+                    test_popup.classList.add("show");
+                }
+                function sfClose() {
+                    var test_popup = document.getElementById("sort-filter-popup");
+                    test_popup.classList.remove("show");
+                    document.getElementById("popups").classList.remove("show");
+                }
+                function deleteConfirm() {
+                    var test_popup = document.getElementById("delete-confirmation");
+                    test_popup.classList.add("show");
+                }
+                function deleteClose() {
+                    var test_popup = document.getElementById("delete-confirmation");
                     test_popup.classList.remove("show");
                 }
             </script>
         </main>
-        <div class="popup">
-            <section id="recipe-popup">
-                <button id="recipe-close" class="float-right line-spacing" onclick="testClose()">X</button>
+        <div id="popups">
+            <section id="recipe-popup" class="popup recipe-pages">
+                <button type="button" id="recipe-close" class="float-right line-spacing close-button" onclick="testClose()">X</button>
+                <button type="button" id="edit-recipe" class="float-right recipe-button">Edit Recipe</button>
+                <button type="button" id="delete-recipe" class="float-right recipe-button" onclick="deleteConfirm()">Delete Recipe</button>
+                <div id="recipe-tags" class="float-right">
+                    <h3 id="tags-header" class="line-spacing">Tags</h3>
+                    <p id="no-recipe-tags-yet">There are no tags.</p>
+                    <p class="tag"> Tag 1 </p>
+                </div>
                 <h2 id="recipe-name" class="line-spacing">Recipe Name</h2>
-                <p id="tracker" class="line-spacing">You have made this X times, most recent time was Y days ago.</p>
-                <img id="recipe-image" class="line-spacing" alt="Image of Dish">
+                <p id="tracker" class="line-spacing">You have made this <span id="tracker-count">X</span> times, most recent time was <span id="tracker-days">Y</span> days ago.</p>
+                <img id="recipe-image" class="line-spacing" alt="Image of Dish"> <br>
                 <h3 id="ingredients-header" class="line-spacing">Ingredients</h3>
+                <span>1 <input type="range" min="1" max="10" step="1"> 10 | Number of servings: <span id="serving-value">Z</span></span>
                 <ul id="ingredients" class="line-spacing">
                     <li>0 Units of Ingredient 1</li>
                 </ul>
-                <button id="add-grocery" class="line-spacing">Add to Grocery List</button>
+                <button id="add-grocery" class="line-spacing recipe-button">Add to Grocery List</button>
                 <h3 id="instructions-header" class="line-spacing">Instructions</h3>
                 <ol id="instructions" class="line-spacing">
                     <li>Do something.</li>
                     <li>Do something else.</li>
                 </ol>
-                <button id="track" class="line-spacing">Just Made</button>
+                <button id="track" class="line-spacing recipe-button">Just Made</button>
             </section>
-            <section id="p-popup">
-                <p onclick="pClose()">wooooooo</p>
+            <section id="recommended-recipe-popup" class="popup recipe-pages">
+                <button id="recommended-recipe-close" class="float-right line-spacing close-button" onclick="pClose()">X</button>
+                <h2 id="recipe-name" class="line-spacing">Recipe Name</h2>
+                <img id="recipe-image" class="line-spacing" alt="Image of Dish"> <br>
+                <h3 id="ingredients-header" class="line-spacing">Ingredients</h3>
+                <span>Number of servings: <span id="serving-value">Z</span></span>
+                <ul id="ingredients" class="line-spacing">
+                    <li>0 Units of Ingredient 1</li>
+                </ul>
+                <h3 id="instructions-header" class="line-spacing">Instructions</h3>
+                <ol id="instructions" class="line-spacing">
+                    <li>Do something.</li>
+                    <li>Do something else.</li>
+                </ol>
+                <button id="add-recipe" class="line-spacing recipe-button">+ Add to my own list</button>
+            </section>
+            <section id="sort-filter-popup" class="popup">
+                <button id="sort-filter-close" class="float-right line-spacing close-button" onclick="sfClose()">X</button>
+                <h2 id="sort-by-header" class="line-spacing">Sort Recipes By:</h2>
+                <div id="sort-by">
+                    <input type="radio" id="most-made" name="sort"><label for="most-made" class="sort"> Most Made </label>
+                    <input type="radio" id="least-made" name="sort"><label for="least-made" class="sort"> Least Made </label>
+                    <input type="radio" id="alphabetical" name="sort" checked><label for="alphabetical" class="sort"> Alphabetical Order (A-Z) </label>
+                    <input type="radio" id="newest" name="sort"><label for="newest" class="sort"> Newest to Oldest </label>
+                    <input type="radio" id="oldest" name="sort"><label for="oldest" class="sort"> Oldest to Newest </label>
+                </div>
+                <hr>
+                <h2 id="filter-tags" class="line-spacing">Filter By Tags:</h2>
+                <div id="tags">
+                    <p id="no-tags-yet">There are no tags.</p>
+                    <button id="tag-1" class="line-spacing tag">Tag 1</button>
+                </div>
             </section>
         </div>
+        <section id="delete-confirmation">
+            <div id="delete-box">
+                <p>Are you sure you want to delete '<span id="delete-recipe-name">Recipe Name</span>'?</p>
+                <br>
+                <button type="button" id="delete-yes" class="recipe-button delete-button"> Yes </button>
+                <button type="button" id="delete-no" class="recipe-button delete-button" onclick="deleteClose()"> No </button>
+            </div>
+        </section>
     </body>
 </html>
