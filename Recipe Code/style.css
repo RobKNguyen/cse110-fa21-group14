@@ -332,7 +332,9 @@ main #recipe-list article{
   height: 45vh;
   
 }
-
+main #recipe-list article:hover{
+  cursor: pointer;
+}
 main article img{
   object-fit: contain;
   height: 26vh;
