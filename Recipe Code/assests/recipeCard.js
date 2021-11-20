@@ -51,6 +51,9 @@ class RecipeCard extends HTMLElement{
         recipeTitle.innerHTML = get('name');
 
         recipeText.appendChild(recipeTitle);
+        card.appendChild(recipeText);
+        shadow.appendChild(card);
+        shadow.appenedChild(styleElem);
     }  
 }
 
