@@ -31,37 +31,37 @@
             - Homepage
                 - one recipe json will be pulled from recommended list
                 - clicking on recipe will open recipe pop up with rec page in back
-                - **functionA**: return one random json recipe
-                - **functionB**: given ID of recipe, can return json
-            - **JSONReadingFunctions**
+                -  **functionA** : return one random json recipe
+                -  **functionB** : given ID of recipe, can return json
+            -  **JSONReadingFunctions** 
                 - functions to retrieve individual info from jsons
             - Recommended Recipe Pop Up
                 - same JSON stuff
-                - **functionC**: "Add to my own list" button should add recipe to my recipes list
+                -  **functionC** : "Add to my own list" button should add recipe to my recipes list
                 - will need to transfer from API to local storage
             - Recommended Recipe List Page
-                - **functionD**: load all 100 recipes at once
+                -  **functionD** : load all 100 recipes at once
                     - cards are just picture and title
-                - **functionE**: search from rec recipes by prefix
+                -  **functionE** : search from rec recipes by prefix
             - User Recipe List Page
                 - same concept as rec recipe page
-                - **functionF**: return all user recipes
-                - **functionG**: give ID, return json recipe
+                -  **functionF** : return all user recipes
+                -  **functionG** : give ID, return json recipe
                     - specific needs outlined in doc
-                - **functionH**: ?
+                -  **functionH** : ?
             - Create/Edit 
-                - **functionI**: make ingredients array of arrays
-                - **functionJ**: create recipe by things detailed on doc
+                -  **functionI** : make ingredients array of arrays
+                -  **functionJ** : create recipe by things detailed on doc
             - Delete Window
-                - **functionK**: provided ID, delete recipe from database
+                -  **functionK** : provided ID, delete recipe from database
             - Grocery List
                 - put ingredients on list when "Add to list" pressed
                 - Once everything all checked off, list should clear
-                - **functionL**: return up to date grocery list
-                - **functionM**: update list
+                -  **functionL** : return up to date grocery list
+                -  **functionM** : update list
             - Tracker
                 - when "just made" clicked, tracker is incremented
-                - **functionN**: updates tracker and last made date
+                -  **functionN** : updates tracker and last made date
 ### For Next Time
         - On doc highlight which features need to be done by Sunday to have CRUD features done by deadline
         - Videos
