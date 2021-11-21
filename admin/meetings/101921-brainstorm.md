@@ -20,7 +20,7 @@
 ## Agenda:
 ###     Unfinished Business
         - N/A
-###     Business for Today
+### Business for Today
         - Created a Project Board on Github
         - Research 
         - Brainstorm for Features
