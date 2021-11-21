@@ -36,6 +36,6 @@
         - milan will turn in the group contract assignment and change the file names
 ###     For Next Time
         - N/A
-## Decisions Made:
+## Decisions Made
     - N/A
 ## Ending Time: 4:00
