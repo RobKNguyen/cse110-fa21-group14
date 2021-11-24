@@ -17,6 +17,7 @@
 */
 
 //returns recipe object given recipe name or id
+
 export function get(key) {
     const data = JSON.parse(localStorage.getItem('recipeData'))
     var result = data.filter(function (item) {
@@ -33,6 +34,7 @@ export function getAll() {
 }
 
 //prepare image link for export when uploaded 
+
 // $("#input-file").change(function () {
 //     if (this.files && this.files[0]) {
 //         var FR = new FileReader();
@@ -81,6 +83,7 @@ export function save(recipe) {
     imgURL = ''
     console.log(localStorage.getItem('recipeData'))
 }
+
 export function saveToLocalStorage(data) {
     localStorage.setItem('recipeData', JSON.stringify(data))
 }
