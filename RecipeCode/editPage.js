@@ -1,5 +1,5 @@
-import {get, getAll, imgToURL, save, saveToLocalStorage, deleteRecipe} from "../testing/backend src/backend.js";
-import {createTagInput, createIngredientInput, createInstructionInput} from"../testing/frontend src/frontend.js";
+import {get, getAll, imgToURL, save, saveToLocalStorage, deleteRecipe} from "testing/backend src/backend.js";
+import {createTagInput, createIngredientInput, createInstructionInput} from "testing/frontend src/frontend.js";
 
 window.addEventListener('DOMContentLoaded', init);
 var pageId; //Current Recipe key for access to recipe object
