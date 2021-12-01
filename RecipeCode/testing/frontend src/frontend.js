@@ -1,6 +1,6 @@
 import { get, getAll, imgToURL, save, saveToLocalStorage, deleteRecipe, sortAll, groceryList, addToGroceryList, filterRecipes} from '../backend src/backend.js';
-import {makeRecList} from '/RecipeCode/assets/recommended.js'; 
-import {makeRecipeOTD} from '/RecipeCode/assets/recipeOTD.js'; 
+import {makeRecList} from 'assets/recommended.js'; 
+import {makeRecipeOTD} from 'assets/recipeOTD.js'; 
 window.addEventListener('DOMContentLoaded', init);
 const tags = document.getElementById('tags-inputted');
 const name = document.getElementById('input-recipe-name');
