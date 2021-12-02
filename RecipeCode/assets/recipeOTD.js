@@ -69,7 +69,7 @@ function randomRecipe(data){
  */
 export function makeRecipeOTD() {
     console.log("loaded");
-    fetch("assets/recommended.json")
+    fetch("./assets/recommended.json")
     .then(response => {
     return response.json();
     })

@@ -1,6 +1,6 @@
 import { get, getAll, imgToURL, save, saveToLocalStorage, deleteRecipe, sortAll, groceryList, addToGroceryList, filterRecipes} from '../backend src/backend.js';
-import {makeRecList} from 'assets/recommended.js'; 
-import {makeRecipeOTD} from 'assets/recipeOTD.js'; 
+import {makeRecList} from '../../assets/recommended.js'; 
+import {makeRecipeOTD} from '../../assets/recipeOTD.js'; 
 window.addEventListener('DOMContentLoaded', init);
 const tags = document.getElementById('tags-inputted');
 const name = document.getElementById('input-recipe-name');
@@ -346,7 +346,7 @@ export function createTagInput() {
 
     // defining the elements
     tagName.setAttribute('type', 'text');
-    removeButton.setAttribute('src', '../../RecipeCode/remove.png');
+    removeButton.setAttribute('src', './remove.png');
     removeButton.setAttribute('alt', 'Remove');
 
     // adding classes for styling and identification
@@ -385,7 +385,7 @@ export function createIngredientInput() {
     ingredientName.setAttribute('type', 'text');
     ingredientAmount.setAttribute('type', 'text');
     ingredientUnit.setAttribute('type', 'text');
-    removeButton.setAttribute('src', '../../RecipeCode/remove.png');
+    removeButton.setAttribute('src', './remove.png');
     removeButton.setAttribute('alt', 'Remove');
 
     // adding classes for styling and identification
@@ -427,7 +427,7 @@ export function createInstructionInput() {
     // defining the elements
     stepInput.setAttribute('rows', '2');
     stepInput.setAttribute('cols', '50');
-    removeButton.setAttribute('src', '../../RecipeCode/remove.png');
+    removeButton.setAttribute('src', './remove.png');
     removeButton.setAttribute('alt', 'Remove');
 
     // adding classes for styling and identification
