@@ -1,4 +1,4 @@
-import {save} from '../../testing/backend src/backend.js';
+import {save} from '../testing/backend src/backend.js';
 window.addEventListener('DOMContentLoaded', init);
 const search_bar = document.getElementById('recommended-search-bar');
 // Function to traverse recommended JSon object and
