@@ -96,5 +96,5 @@ async function init() {
 let cancelbuttonEditPage = document.getElementById("cancel-recipe");
 cancelbuttonEditPage.addEventListener("click", e => {
     localStorage.removeItem("editId");
-    window.location.href = 'user.html';
+    window.location.href = './user.html';
 })

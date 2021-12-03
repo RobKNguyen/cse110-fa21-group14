@@ -1,6 +1,6 @@
 import { get, getAll, imgToURL, save, saveToLocalStorage, deleteRecipe, sortAll, groceryList, addToGroceryList, filterRecipes } from '../backend src/backend.js';
-import { makeRecList } from '/Recipe Code/assets/recommended.js';
-import { makeRecipeOTD } from '/Recipe Code/assets/recipeOTD.js';
+import { makeRecList } from '../../RecipeCode/assets/recommended.js';
+import { makeRecipeOTD } from '../../RecipeCode/assets/recipeOTD.js';
 window.addEventListener('DOMContentLoaded', init);
 const tags = document.getElementById('tags-inputted');
 const name = document.getElementById('input-recipe-name');
@@ -380,7 +380,7 @@ export function createTagInput() {
 
     // defining the elements
     tagName.setAttribute('type', 'text');
-    removeButton.setAttribute('src', '../../Recipe Code/remove.png');
+    removeButton.setAttribute('src', './remove.png');
     removeButton.setAttribute('alt', 'Remove');
 
     // adding classes for styling and identification
@@ -419,7 +419,7 @@ export function createIngredientInput() {
     ingredientName.setAttribute('type', 'text');
     ingredientAmount.setAttribute('type', 'text');
     ingredientUnit.setAttribute('type', 'text');
-    removeButton.setAttribute('src', '../../Recipe Code/remove.png');
+    removeButton.setAttribute('src', './remove.png');
     removeButton.setAttribute('alt', 'Remove');
 
     // adding classes for styling and identification
@@ -461,7 +461,7 @@ export function createInstructionInput() {
     // defining the elements
     stepInput.setAttribute('rows', '2');
     stepInput.setAttribute('cols', '50');
-    removeButton.setAttribute('src', '../../Recipe Code/remove.png');
+    removeButton.setAttribute('src', './remove.png');
     removeButton.setAttribute('alt', 'Remove');
 
     // adding classes for styling and identification

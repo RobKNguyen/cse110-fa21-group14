@@ -79,7 +79,7 @@ export function makeRecList(data) {
 if(search_bar){
     search_bar.addEventListener('keyup', function() {
         // console.log(search_bar.value);
-        fetch("assets/recommended.json")
+        fetch("./assets/recommended.json")
         .then(response => {
         return response.json();
         })
@@ -102,7 +102,7 @@ if(search_bar){
 // Once page loads, render recommended recipe cards.
 function init() {
     console.log("loaded");
-    fetch("assets/recommended.json")
+    fetch("./assets/recommended.json")
     .then(response => {
     return response.json();
     })
